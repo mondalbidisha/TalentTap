@@ -12,7 +12,7 @@ const Layout = ({
 }) => {
   return (
     <div className="min-h-screen overflow-hidden">
-      <div className="bg-gray-800 text-white">
+      <div className="bg-indigo-950 text-white">
         <Seo title={title} description={description} />
         <Header />
         <main className={mainClassName}>{children}</main>

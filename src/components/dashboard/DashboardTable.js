@@ -23,7 +23,7 @@ const DashboardTable = () => {
     <div className=" space-y-4">
       {sessions.length > 0 && (
         <div className="space-y-1">
-          <p className="text-sm uppercase pl-1 ">Practise Interviews</p>
+          <p className="text-sm uppercase pl-1 ">Practise Sessions</p>
           <Table data={sessions} url="/review" />
         </div>
       )}

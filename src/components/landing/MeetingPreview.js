@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import dashboard from "../../../static/videoCall.png"
 
 const MeetingPreview = () => {
@@ -18,10 +17,9 @@ const MeetingPreview = () => {
             role="contentinfo"
             className="text-base leading-5 mt-5 text-gray-600"
           >
-            Our Interview Assessment tool goes beyond the practice rooms
-            straight into the interview battlefield. InterviewToast uses Agora
-            to provide real-time transcriptions, key-word and profanity
-            detection, and analysis on live interviews.
+            Our Interview Assessment tool extends beyond practice sessions into real 
+            interview scenarios. TalentTap leverages Agora to deliver real-time transcriptions, 
+            keyword and profanity detection, and live interview analysis.
           </p>
         </div>
         <div
@@ -31,8 +29,7 @@ const MeetingPreview = () => {
           <img
             src={dashboard}
             className="w-full "
-            alt="Screenshot of InterviewToast video chat meeting window"
-            // style={{ transform: "translate3d(20deg, -20deg, 20deg)" }}
+            alt="Screenshot of TalentTap video chat meeting window"
           />
         </div>
       </div>

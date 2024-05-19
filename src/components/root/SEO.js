@@ -24,11 +24,11 @@ const SEO = ({ title, description, lang = "en" }) => {
       <Helmet
         title={metaTitle}
         htmlAttributes={{ lang }}
-        titleTemplate={`%s · InterviewToast`}
+        titleTemplate={`%s · TalentTap`}
         meta={[
           {
             property: `og:title`,
-            content: `${metaTitle} · InterviewToast`,
+            content: `${metaTitle} · TalentTap`,
           },
           {
             name: `description`,

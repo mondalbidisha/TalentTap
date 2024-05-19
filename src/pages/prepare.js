@@ -19,13 +19,12 @@ const Prepare = () => {
   const { user } = useAuth()
   const [streamComplete, setStreamComplete] = React.useState(false)
   const [uploading, setUploading] = React.useState(false)
-  // const [isFocused] = useFocus()
   const [focusLost, setFocusLost] = React.useState(false)
   const [dates, setDates] = React.useState([])
   const [questions, setQuestions] = React.useState([
     "Please introduce yourself",
     "What made you apply for this role?",
-    "What are your strengths?",
+    "What makes you think you are a good fit?",
   ])
   const [question, setQuestion] = React.useState("")
   const [currentQuestion, setCurrentQuestion] = React.useState(0)
@@ -51,7 +50,7 @@ const Prepare = () => {
     const videoID = md5(`${user.uid}/${Date.now()}`)
     setUploading("Uploading your video...")
     const url = await uploadFile(blob, `${user.uid}/${videoID}.mp4`)
-    setUploading("Starting Analysis...")
+    setUploading("Analyzing your video...")
     const symblResponse = await fetch(`/api/analyse`, {
       method: "POST",
       body: JSON.stringify({ url }),
@@ -106,7 +105,7 @@ const Prepare = () => {
       return <LoadingSpinner text="Finding Media Devices..." />
     }
     if (uploading) {
-      return <LoadingSpinner text="Uploading to Toast HQ..." />
+      return <LoadingSpinner text="Uploading to TalentTap HQ..." />
     }
 
     if (focusLost && status === "paused") {
@@ -128,16 +127,15 @@ const Prepare = () => {
               <h2>Welcome to Interview Prep</h2>
             </div>
             <p>
-              This is a tool that helps you prepare for interviews. Record a
-              video of yourself, and then analyse it to help you find how you
-              can improve.
+            This tool helps you prepare for interviews by allowing you to record a video of 
+            yourself and then analyze it to identify areas for improvement.
             </p>
             <div>
               <p className="text-sm uppercase">Question Duration</p>
               <div className="flex items-center space-x-2">
                 <p>Show each question for </p>
                 <input
-                  className="input text-white bg-gray-800 px-3 rounded w-16 border-2 border-orange-400"
+                  className="input text-white bg-gray-800 px-3 rounded w-16 border-2 border-amber-300"
                   value={questionDuration}
                   type="number"
                   onChange={e => setQuestionDuration(e.target.value)}
@@ -156,7 +154,7 @@ const Prepare = () => {
                     <div className="col-span-10 w-full flex items-center space-x-1">
                       <input
                         readOnly
-                        className="input text-white bg-gray-800 px-3 rounded w-full border-2 border-orange-400"
+                        className="input text-white bg-gray-800 px-3 rounded w-full border-2 border-amber-300"
                         value={q}
                         onChange={e => setQuestion(e.target.value)}
                       />
@@ -174,7 +172,7 @@ const Prepare = () => {
                   <div />
                   <div className="col-span-10 w-full flex items-center space-x-1">
                     <input
-                      className="input text-white bg-gray-800 px-3 rounded w-full border-2 border-orange-400"
+                      className="input text-white bg-gray-800 px-3 rounded w-full border-2 border-amber-300"
                       value={question}
                       onChange={e => setQuestion(e.target.value)}
                     />
@@ -200,7 +198,7 @@ const Prepare = () => {
                   checked={showCam}
                   onChange={() => setShowCam(!showCam)}
                 />
-                <span className="ml-2 ">See my webcam while practising</span>
+                <span className="ml-2 ">View my video during practice sessions</span>
               </label>
             </div>
             <button
