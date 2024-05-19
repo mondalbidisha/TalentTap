@@ -1,16 +1,12 @@
 import * as React from "react"
-
 import { useAuth } from "../context/auth-context"
-
 import AgoraRTC from "agora-rtc-sdk-ng"
 
 export default function useAgora(client) {
   const { user } = useAuth()
   const [localVideoTrack, setLocalVideoTrack] = React.useState(undefined)
   const [localAudioTrack, setLocalAudioTrack] = React.useState(undefined)
-
   const [joinState, setJoinState] = React.useState(false)
-
   const [remoteUsers, setRemoteUsers] = React.useState([])
 
   async function createLocalTracks(audioConfig, videoConfig) {

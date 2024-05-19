@@ -1,49 +1,40 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import { m } from "framer-motion"
+import babyYoda from "../../static/baby-yoda-bg-removebg-preview.png"
+import Layout from "../components/root/Layout"
+import Logo from "../assets/Logo"
 
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout>
+      <h1 className="text-6xl font-bold mt-20 mb-6">
+        Error 404. This is not the Toast you are looking for.
+      </h1>
+      <Link className="btn-primary font-bold text-2xl py-2" to="/">
+        Go home?
+      </Link>
+      <div className="w-full h-full items-center justify-center pb-16 relative">
+        <img src={babyYoda} className="mx-auto z-10" />
+        <div className="absolute top-1/2 left-1/2">
+          <m.div
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 5,
+              ease: "linear",
+            }}
+            className="w-42 h-42 relative left-60 mb-12"
+          >
+            <Logo className="h-10 w-10 absolute" />
+          </m.div>
+        </div>
+      </div>
+    </Layout>
   )
 }
 
 export default NotFoundPage
-
 export const Head = () => <title>Not found</title>
