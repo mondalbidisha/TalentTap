@@ -4,26 +4,25 @@
 module.exports = {
   siteMetadata: {
     title: `TalentTap`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.interviewtoast.com`,
+    author: `Bidisha Mondal`,
+    description: `Interview preparation, assessment and feedback tool`,
   },
-  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  }, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
+  plugins: [
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-react-helmet-async`,
+    `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "TalentTap",
+        short_name: "TalentTap",
+        start_url: "/",
+        background_color: "#FB923D",
+        theme_color: "#FB923D",
+        display: "standalone",
+        icon: `src/images/favicon.png`,
+      },
     },
-    __key: "images"
-  }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
-    },
-    __key: "pages"
-  }]
-};
+  ],
+}
