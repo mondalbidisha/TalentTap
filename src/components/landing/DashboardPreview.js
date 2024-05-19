@@ -15,7 +15,7 @@ const DashboardPreview = () => {
             </div>
             <img
               src={dashboard}
-              alt="Screenshot of InterviewToast dashboard page"
+              alt="Screenshot of TalentTap dashboard page"
               className="w-full"
             />
           </div>
@@ -32,10 +32,10 @@ const DashboardPreview = () => {
             role="contentinfo"
             className="text-base leading-5 mt-5 text-gray-600"
           >
-            Get the most out of your live interviews and practice sessions. With
-            InterviewToasts customized dashboard, both candidates and
-            interviewers can really dig deep into the data to understand their
-            strenghts and weaknesses.
+            Maximize the value of your live interviews and practice sessions. 
+            TalentTap's personalized dashboard enables both candidates and interviewers 
+            to thoroughly analyze data, gaining insights into their strengths and areas for 
+            improvement.
           </p>
         </div>
       </div>

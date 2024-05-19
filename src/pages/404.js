@@ -28,7 +28,7 @@ const NotFoundPage = () => {
             }}
             className="w-42 h-42 relative left-60 mb-12"
           >
-            <Logo className="h-10 w-10 absolute" />
+            {/* <Logo className="h-10 w-10 absolute" /> */}
           </m.div>
         </div>
       </div>
