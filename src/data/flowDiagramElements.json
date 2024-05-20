@@ -61,7 +61,7 @@
       "target": "1",
       "animated": true,
       "type": "smoothstep",
-      "label": "Not Ready"
+      "label": "Not Ready Yet ?"
     },
     {
       "id": "e4",
@@ -84,6 +84,6 @@
       "target": "6",
       "animated": true,
       "type": "smoothstep",
-      "label": "Automatic"
+      "label": "Automated"
     }
   ]

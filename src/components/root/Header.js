@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
 import * as React from "react"
-import Logo from "../../assets/Logo"
 import { useAuth } from "../../context/auth-context"
 import useOutsideAlerter from "../../hooks/useOutsideAlerter"
 
@@ -15,7 +14,6 @@ const Header = () => {
         to={user ? "/dashboard" : "/"}
         className="flex items-center font-bold group hover:text-orange-400"
       >
-        {/* <Logo className="h-8 w-8 group-hover:animate-bounce" alt="Toast" /> */}
         <h1 className="text-xl">TalentTap</h1>
       </Link>
       {user && (

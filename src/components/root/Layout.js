@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import Seo from "./SEO"
 import Header from "./Header"
 import Footer from "./Footer"
