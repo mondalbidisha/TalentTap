@@ -1,49 +1,26 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# TalentTap
 
-## 🚀 Quick start
+## Overview
 
-1.  **Create a Gatsby site.**
+As web developers, we've been through a lot of tech interviews and they can be frustrating - especially when those interviews don't even have someone else on the other side! We've all paid our dues with Hackerrank and Leetcode but with little feedback and no practice alternatives, there was never a safe space to prepare for those recorded interviews. Whether you're a an applicant or an interviewer - interviews suck. Powered by AI, TalentTap offers users everything they might need to make their next interview a more positive experience.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Implementation
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+Interview Preparation Tool - While there are many excellent tools to help you prepare for coding interviews, getting a new job involves more than just coding. There aren't many tools specifically designed for the non-coding aspects of the interview process. TalentTap addresses this gap by utilizing Symbl's conversation intelligence AI in this video application. This goes beyond basic speech-to-text, providing real-time insights and extracting discussion topics, sentiment, and conversation analytics such as talk-to-listen ratios.
 
-2.  **Start developing.**
+Interview Feedback Tool - TalentTap is designed to source questions either directly from the candidate or from our extensive question bank. It then computes performance ratings and offers quantitative and qualitative feedback on practice interviews. This approach helps candidates improve and be fully prepared for their actual interviews.
 
-    Navigate into your new site’s directory and start it up.
+Interview Assessment Tool - TalentTap is an assessment tool that extends beyond practice sessions to live interview scenarios. TalentTap, uses Agora to provide real-time transcriptions, keyword and profanity detection, and analysis during live interviews. Companies face increasing pressure from regulators to provide objective feedback after being sued for not hiring candidates. Some companies opt not to provide feedback due to this pressure, while others lack the resources to offer it on request. TalentTap offers an alternative by leveraging real-time data analytics to provide impartial and objective feedback, enhancing the experience for both candidates and interviewers.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Technology Stack
 
-3.  **Open the code and start customizing!**
+TalentTap is built using the following technology stack -
 
-    Your site is now running at http://localhost:8000!
+1. Symbl.ai - for sentiment analysis, topic extraction, conversation analytics, entity and intent recognition, and real-time insights APIs.
+2. Agora - for video conferencing (WebRTC being the underlying technology)
+3. ReactJS - as the de-facto JavaScript library for building user interfaces
+4. GatsbyJS - as our blazing fast React framework for performance, scalability, security and accessibility
+5. Gatsby Cloud - Functions to bring an entire backend to InterviewToast - without managing a backend
+6. Firebase - to enable user accounts, SSO,
+7. TailwindCSS - to leverage the benefits and speed of the utility first CSS framework.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
